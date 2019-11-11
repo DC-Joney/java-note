@@ -2,7 +2,7 @@
 
 主从复制高可用
 
-![1573410909989](assets\1573410909989.png)
+![1573410909989](assets/1573410909989.png)
 
 redis-sentinal是实现了redis集群的故障转移功能
 
@@ -10,7 +10,7 @@ redis-sentinal是实现了redis集群的故障转移功能
 
 
 
-![1573411024164](assets\1573411024164.png)
+![1573411024164](assets/1573411024164.png)
 
 redis-sentinal可以对多套 master-slave进行监控
 
