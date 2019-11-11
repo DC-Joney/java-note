@@ -1,4 +1,4 @@
-####redis-sentinal 
+#### redis-sentinal
 
 主从复制高可用
 
@@ -71,7 +71,8 @@ sentinel parallel-syncs mymaster 1
 redis哨兵部署，哨兵之间不能相互通信，哨兵不能发现slave？
 
 ```
-查看下各个哨兵的配置文件中的sentinel myid xxxx是不是一样的，如果是一样的就把所有配置文件中这行删除，然后重启，会自动生成唯一的。
+查看下各个哨兵的配置文件中的sentinel myid xxxx是不是一样的，
+如果是一样的就把所有配置文件中这行删除，然后重启，会自动生成唯一的。
 ```
 
 
