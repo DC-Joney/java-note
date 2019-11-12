@@ -31,3 +31,16 @@ ssh-keygen.exe   -t  rsa -C  @email.com
 步骤6 : Title随便写，Key 把之前id_rsa.pub的内容复制进去，点击 Add SSH key，设置ssh key 完成。
 
 ![1573483941270](assets/1573483941270.png)
+
+
+
+
+
+步骤7 : 检查SSH key是否有效
+
+      在git命令行输入：ssh  -T git@github.com；这里会要求你输入SSH key密码，如果刚才生成SSH key时未输入密码，密码就为空；然后看到信息：
+
+```
+ERROR: Hi 用户名! You’ve successfully authenticated；说明配置成功； 
+```
+
