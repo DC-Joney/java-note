@@ -344,3 +344,32 @@ ControllerAdviceBean
 ResponseBodyEmitterReturnValueHandler
 ```
 
+
+
+
+
+```
+public class UniversalViewResolver{
+
+    @Autowired
+    private InternalResourceViewResolver viewResolver;
+
+    public View forwardView(String url) throws Exception {
+       return viewResolver.resolveViewName(UrlBasedViewResolver.FORWARD_URL_PREFIX + url, Locale.CHINA);
+    }
+
+    public View redirectView(String url) throws Exception {
+        return viewResolver.resolveViewName(UrlBasedViewResolver.REDIRECT_URL_PREFIX + url, Locale.CHINA);
+    }
+    
+    public static UniversalViewResolver shardInstance(){
+        return UniversalViewResolverHolder.INSTANCE;
+    } 
+    
+    private static class UniversalViewResolverHolder{
+       private static UniversalViewResolver INSTANCE = new UniversalViewResolver();
+    }
+}
+
+```
+
