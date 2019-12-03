@@ -12,3 +12,9 @@ elapsed：执行的时间
 
 
 做业务时间监控
+
+Stopwatch stopWatch = StopWatch.create();
+
+
+
+stopWatch.stop();
