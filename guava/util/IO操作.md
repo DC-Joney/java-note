@@ -53,8 +53,6 @@ limit(InputStream,long) 只读取limit范围内的字节
 
 
 
-
-
 ### ByteSource
 
 ```
@@ -63,31 +61,11 @@ slice(start,offset) 从start位置开始，取offset个元素（切片）
 
 
 
-
-
-
-
 ### ByteSink
 
 ```
 write(byte[]data) 写入数据
 ```
-
-
-
-
-
-
-
-
-
-### BaseEncoding
-
-
-
-
-
-
 
 
 
@@ -158,5 +136,16 @@ writeLines(Stream<? extends CharSequence> lines)
 writeLines(Stream<? extends CharSequence> lines, String lineSeparator)
 writeLines(Iterator<? extends CharSequence> lines, String lineSeparator)
 writeFrom(Readable readable)
+```
+
+
+
+
+
+### BaseEncoding
+
+```
+对字符串进行Base64与Base64反编码
+针对 33,64以及url的编码 
 ```
 

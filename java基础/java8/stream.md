@@ -31,6 +31,18 @@ map
 reduce
 toArray（）
 forEach
+
+
+findAny(): 将元素随便返回一个
+findFirst() ：返回第一个
+
+
+sorted() 
+
+sorted(Comparcter comparctor)
+
+
+Comparcter 比较器
 ```
 
 
@@ -41,6 +53,8 @@ Collectors 常用方法
 
 ```
 joing
+
+
 ```
 
 
