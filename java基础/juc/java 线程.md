@@ -1,4 +1,4 @@
-####多线程的几种实现方式，什么是线程安全。
+### 多线程的几种实现方式，什么是线程安全。
 
 ```
 继承Thread类
@@ -30,7 +30,7 @@ Run方法会在Thread.c文件中使用JVM_startThread 类启动线程然后执�
 
 
 
-####ForkJoin框架的作用？
+### ForkJoin框架的作用？
 
 
 
@@ -48,7 +48,7 @@ ReadWriteLock来实现读写锁
 
 
 
-####CompletionService的作用？
+### CompletionService的作用？
 
 ```
 CompletionService 主要是为了大量相同任务的执行，
@@ -61,7 +61,7 @@ CompletionService.take() 可以获取到最先执行完成的任务
 
 
 
-####线程池分为几种？
+### 线程池分为几种？
 
 ```
 线程池分为三种
@@ -82,7 +82,7 @@ Executors.newWorkStealingPool();
 
 
 
-####Volitile 关键字和 jmm内存
+### Volitile 关键字和 jmm内存
 
 实现多线程间的可见性
 
@@ -115,13 +115,13 @@ ConcurrentSkipListMap(有序map)（底层是用cas来进行完成的）
 
 
 
-####Synchornized 和 lock的区别
+### Synchornized 和 lock的区别
 
 ![1572211649903](../assets\1572211649903.png)
 
 
 
-####volatile的原理，作用，能代替锁么。
+### volatile的原理，作用，能代替锁么。
 
 
 
@@ -129,7 +129,7 @@ ConcurrentSkipListMap(有序map)（底层是用cas来进行完成的）
 
 
 
-####画一个线程的生命周期状态图。
+### 画一个线程的生命周期状态图。
 
 ![1572212260340](../assets\1572212260340.png)
 
@@ -137,7 +137,7 @@ ConcurrentSkipListMap(有序map)（底层是用cas来进行完成的）
 
 
 
-####sleep和wait的区别。
+### sleep和wait的区别。
 
 ```
 1. Wait方法是object的方法,Sleep是Thread中的方法
@@ -150,7 +150,7 @@ ConcurrentSkipListMap(有序map)（底层是用cas来进行完成的）
 
 
 
-####sleep和sleep(0)的区别。
+### sleep和sleep(0)的区别。
 
 ```
 当 timeout = 0， 即 Sleep(0)，如果线程调度器的可运行队列中有大于或等于当前线程优先级的就绪线程存在，操作系统会将当前线程从处理器上移除，调度其他优先级高的就绪线程运行；如果可运行队列中的没有就绪线程或所有就绪线程的优先级均低于当前线程优先级，那么当前线程会继续执行，就像没有调用 Sleep(0)一样。
@@ -168,7 +168,7 @@ ConcurrentSkipListMap(有序map)（底层是用cas来进行完成的）
 
 
 
-####synchronized的原理是什么，一般用在什么地方(比如加在静态方法和非静态方法的区别，静态方法和非静态方法同时执行的时候会有影响吗)，解释以下名词：重排序，自旋锁，偏向锁，轻量级锁，可重入锁，公平锁，非公平锁，乐观锁，悲观锁。
+### synchronized的原理是什么，一般用在什么地方(比如加在静态方法和非静态方法的区别，静态方法和非静态方法同时执行的时候会有影响吗)，解释以下名词：重排序，自旋锁，偏向锁，轻量级锁，可重入锁，公平锁，非公平锁，乐观锁，悲观锁。
 
 ```
 
@@ -178,7 +178,7 @@ ConcurrentSkipListMap(有序map)（底层是用cas来进行完成的）
 
 
 
-####用过哪些原子类，他们的原理是什么。
+### 用过哪些原子类，他们的原理是什么。
 
 ````
 AtomicInteger(针对 int类型)
@@ -198,7 +198,7 @@ AtomicReferenceFieldUpdater
 
 
 
-####JUC下研究过哪些并发工具，讲讲原理。
+### JUC下研究过哪些并发工具，讲讲原理。
 
 Semphare, Countdowlatch, Cyclicbarrier
 
@@ -206,7 +206,7 @@ Semphare, Countdowlatch, Cyclicbarrier
 
 
 
-####用过线程池吗，如果用过，请说明原理，并说说newCache和newFixed有什么区别，构造函数的各个参数的含义是什么，比如coreSize，maxsize等。
+### 用过线程池吗，如果用过，请说明原理，并说说newCache和newFixed有什么区别，构造函数的各个参数的含义是什么，比如coreSize，maxsize等。
 
 ```
 
@@ -216,7 +216,7 @@ Semphare, Countdowlatch, Cyclicbarrier
 
 
 
-####线程池的关闭方式有几种，各自的区别是什么。
+### 线程池的关闭方式有几种，各自的区别是什么。
 
 两种
 
@@ -229,7 +229,7 @@ shutdownNow ： 不管线程池中是否有任务，直接关闭
 
 
 
-####假如有一个第三方接口，有很多个线程去调用获取数据，现在规定每秒钟最多有10个线程同时调用它，如何做到。
+### 假如有一个第三方接口，有很多个线程去调用获取数据，现在规定每秒钟最多有10个线程同时调用它，如何做到。
 
 ```
 Semaphore : 是一个计数信号量,可以设置许可证的数量
@@ -239,7 +239,7 @@ Semaphore : 是一个计数信号量,可以设置许可证的数量
 
 
 
-####spring的controller是单例还是多例，怎么保证并发的安全。
+### spring的controller是单例还是多例，怎么保证并发的安全。
 
 ```
 spring的controller是单例的
@@ -247,7 +247,7 @@ spring的controller是单例的
 
 
 
-####用三个线程按顺序循环打印abc三个字母，比如abcabcabc。
+### 用三个线程按顺序循环打印abc三个字母，比如abcabcabc。
 
 ```
 lock synchorized 依赖于 锁的排他性
@@ -257,7 +257,7 @@ lock synchorized 依赖于 锁的排他性
 
 
 
-####ThreadLocal用过么，用途是什么，原理是什么，用的时候要注意什么。
+### ThreadLocal用过么，用途是什么，原理是什么，用的时候要注意什么。
 
 ```
 ThreaLocal 是将自定义存储的数据和当前线程进行绑定

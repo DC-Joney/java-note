@@ -1,6 +1,6 @@
 # Spring 面试题
 
-###BeanFactory 和 FactoryBean的区别？
+### BeanFactory 和 FactoryBean的区别？
 
 FactoryBean是Spring 实例化bean的一种方法，可以定义其复杂的初始化结构，
 
@@ -51,7 +51,7 @@ InstantiationAwareBeanPostProcessor（在实例化bean之前，或者实例化Be
 
 
 
-###Spring BeanPostProcessor 的处理流程是什么？
+### Spring BeanPostProcessor 的处理流程是什么？
 
 在调用BeanFactory的refresh方法时，会调用内部的finshBeanFactoryInitiazation 进行初始化，流程如下
 
@@ -114,7 +114,7 @@ StringValueResolver 可以将String字符串中的一些需要环境变量以及
 ${port.name}234   ==>  8899234
 ```
 
-![1571866235768](assets\1571866235768.png)
+![1571866235768](assets/1571866235768.png)
 
 
 
@@ -147,7 +147,7 @@ else {
 
 
 
-###@Value注解一般用于获取什么属性？
+### @Value注解一般用于获取什么属性？
 
 普通数值#{20-2}，EL表达式的值#{} **Spel**，在spring 环境变量中的值${}
 
@@ -159,7 +159,7 @@ else {
 
 
 
-###Spring aop都支持什么注解有什么功能？
+### Spring aop都支持什么注解有什么功能？
 
 - @PointCut 声明一个通用切面方法
 
@@ -252,7 +252,7 @@ AopConfigUtils.forceAutoProxyCreatorToUseClassProxying(registry)
 
 
 
-###Springmvc用到的注解，作用是什么，原理？
+### Springmvc用到的注解，作用是什么，原理？
 
 ```
 MvcUriComponentsBuilder 从某一个controller获取完整的url类型
@@ -310,7 +310,7 @@ String 为url
     
     ```
 
-    ​
+    
 
 **==将 类路径下  META-INF/spring.factories 里面配置的所有EnableAutoConfiguration的值加入到了容器中；==**
 

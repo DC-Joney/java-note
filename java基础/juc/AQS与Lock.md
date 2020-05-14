@@ -1,3 +1,32 @@
+## AQS 核心
+
+AQS依赖于 State，CLH队列和 CAS实现，实现了公平锁，非公平锁，独占锁以及共享锁，还依赖于LockSupport的原子性语义来实现
+
+### LockSupport 
+
+LockSupport 类是依赖于Unsafe类实现的，它会与每个使用的它的线程都关联一个许可证，默认情况下调用LockSupport类的方法的线程是不持有许可证的。
+
+常用的方法介绍
+
+- void park()
+- void unpark(Thread thread)
+- parkNanos(long nanos)
+- park(Object blocker)
+- parkNanos(Object blocker,long nanos)
+- void parkUntil(Object blocker,long nanos)
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 AQS 三个核心
 	state 表示当前锁是否有线程获取
@@ -19,13 +48,11 @@ AQS实现了两种类型的锁机制
     StampedLock//忽略
 ```
 
+### 
 
 
 
-
-
-
-####AQS核心类型
+### AQS核心类
 
 > 状态，队列，CAS 
 
@@ -37,9 +64,7 @@ CLH队列：队列通常是一个等待的集合，大多数以链表的形式�
 CAS: CAS操作是最轻量的并发处理，通常我们对于状态的修改都会用到CAS操作，因为状态可能被多个线程同时修改，CAS操作保证了同一个时刻，只有一个线程能修改成功，从而保证了线程安全，CAS操作基本是由Unsafe工具类的compareAndSwapXXX来实现的；CAS采用的是乐观锁的思想，因此常常伴随着自旋，如果发现当前无法成功地执行CAS，则不断重试，直到成功为止，自旋的的表现形式通常是一个死循环for(;;)。
 ```
 
-
-
-##### State
+#### State
 
 在AQS中，状态是由state属性来表示的，不出所料，它是volatile类型的：
 
@@ -57,9 +82,7 @@ private transient Thread exclusiveOwnerThread; //继承自AbstractOwnableSynchro
 
 `exclusiveOwnerThread`属性的值即为当前持有锁的线程
 
-
-
-##### 队列
+#### 队列
 
 AQS中，队列的实现是一个双向链表，被称为`sync queue`，它表示**所有等待锁的线程的集合**，有点类似于我们前面介绍synchronized原理的时候说的`entry list`。 
 
@@ -160,7 +183,7 @@ private transient volatile Node tail;
 
 
 
-#####CAS操作
+#### CAS操作
 
 前面我们提到过，CAS操作大对数是用来改变状态的，在AQS中也不例外。我们一般在静态代码块中初始化需要CAS操作的属性的偏移量：
 
@@ -215,9 +238,7 @@ private static final boolean compareAndSetNext(Node node, Node expect, Node upda
 
 最后就是自旋了，这一点就没有什么好说的了，我们在后面源码分析的时候再详细讲。
 
-
-
-##### AQS核心属性
+#### AQS核心属性
 
 ```
 锁相关的属性有两个：
@@ -249,7 +270,7 @@ sync queue：
 
 
 
-####AQS （公平锁）
+#### AQS （公平锁）
 
 ```
 ReentrantLock  
@@ -405,7 +426,7 @@ private Node addWaiter(Node mode) {
 
 
 
-####AQS非公平锁
+#### AQS非公平锁
 
 ```
 
@@ -415,7 +436,7 @@ private Node addWaiter(Node mode) {
 
 
 
-####AQS共享锁
+### AQS共享锁
 
 ```
 

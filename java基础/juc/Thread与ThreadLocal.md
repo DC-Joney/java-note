@@ -159,7 +159,7 @@ key 使用弱引用：引用的ThreadLocal的对象被回收了，由于ThreadLo
 所以在使用 ThreadLocal的时候要尽量使用remove方法将当前的key移除，移除完成之后在一下次 set，get，remove的时候就会将key为null的entry从map中移除掉
 ```
 
-![1572297559930](assets\1572297559930.png)
+![1572297559930](C:\Users\10506\Desktop\1572297559930.png)
 
 
 
