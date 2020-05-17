@@ -1,21 +1,31 @@
+### 设置用户名和密码
+
 git config --global user.name "dcjoney"
-
-
 
 git config --global user.email "@qq.com"
 
 
 
+查看用户名和密码
+
+git config --global user.name
+
+git config --global user.email
+
+
+
+
+
+### git其他命令
+
 ```
-github 上传
+git init 初始化仓库
 
-git init
-
-git add .
+git add .（*） 添加文件
 
 git commit -m "注释"
 
-git log 查看git的信息
+git log  查看git的信息
 
 git log --pretty=oneline 查看具体的历史版本号
 
@@ -27,7 +37,11 @@ git reflog 查看 版本的所有信息
 
 git reset --hard 版本号 直接回退到某个版本号
 
+git remote -v 查看远程信息
 
+git remote add url 添加某个远程分支
+
+git status 查看当前状态
 
  3.查看文件提交记录
 • 执行 git log 文件名 进行查看历史记录
