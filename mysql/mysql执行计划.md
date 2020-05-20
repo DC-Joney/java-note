@@ -80,7 +80,7 @@ Extra
 
 POSSIBLE_KEYS
 
-![1572433481603](C:\Users\Administrator\Desktop\面试\面试题\mysql\assets\1572433481603.png)
+![1572433481603](assets\1572433481603.png)
 
 
 

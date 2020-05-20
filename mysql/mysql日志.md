@@ -1,8 +1,8 @@
-###Server层日志
+### Server层日志
 
 server层的一般是在server层面进行写入
 
-####常用查询日志
+#### 常用查询日志
 
 ```
 generate_log
@@ -19,7 +19,7 @@ TABLE: 保存在表中
 
 
 
-####错误日志
+#### 错误日志
 
 ```
 error_log 记录mysql在启动或者停止出现的问题
@@ -39,7 +39,7 @@ log_errpr_verbosity = [1,2,3]
 
 
 
-####慢日志
+#### 慢日志
 
 ```
 slow_query_log
@@ -62,7 +62,7 @@ log_slow_slave_statements = [ON|OFF] 指定binlog的日志格式
 
 
 
-####二进制日志
+#### 二进制日志
 
 ```
 binlog
@@ -120,7 +120,7 @@ expire_log_days = days mysql设置 自动过期的二进制日志时间
 
 
 
-####中继日志
+#### 中继日志
 
 ```
 relay_log：用于主从复制，临时存储从从主库同步的二进制日志
@@ -206,7 +206,7 @@ redo log 用于保证 crash-safe 能力。innodb_flush_log_at_trx_commit 这个�
 
 #####
 
-#####bin log参数
+##### bin log参数
 
 sync_binlog 这个参数设置成 1 的时候，表示每次事务的 binlog 都持久化到磁盘。这个参数我也建议你设置成 1，这样可以保证 MySQL 异常重启之后 binlog 不丢失。
 

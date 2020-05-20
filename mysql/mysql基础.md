@@ -1,4 +1,4 @@
-####mysql 执行流程
+#### mysql 执行流程
 
 
 
@@ -25,7 +25,7 @@ join on 和 where的区别
 
 
 
-####mysql sql语句：行转列问题
+#### mysql sql语句：行转列问题
 
 存在表score，记录学生的考试成绩，如下图所示：
 
@@ -86,7 +86,7 @@ from score group by name;
 
 
 
-####delete和 trucate 以及drop的区别
+#### delete和 trucate 以及drop的区别
 
 （1）DELETE语句执行删除的过程是每次从表中删除一行，并且同时将该行的删除操作作为事务记录在日志中保存以便进行进行回滚操作。
 
@@ -171,7 +171,7 @@ truncate table 在功能上与不带 WHERE 子句的 DELETE 语句相同：二�
 
 
 
-####exists和in的使用方式：　　
+#### exists和in的使用方式：　　
 
 　　1、exists是对外表做loop循环，每次loop循环再对内表（子查询）进行查询，那么因为对内表的查询使用的索引（内表效率高，故可用大表），而外表有多大都需要遍历，不可避免（尽量用小表），故内表大的使用exists，可加快效率；
 

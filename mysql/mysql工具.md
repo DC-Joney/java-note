@@ -1,4 +1,4 @@
-####mysql 分析二进制日志文件工具
+#### mysql 分析二进制日志文件工具
 
 ```
 mysqlbinlog
@@ -8,7 +8,7 @@ mysqlbinlog
 
 
 
-####修改表结构工具
+#### 修改表结构工具
 
 ```
 pt-online-schema-change
@@ -16,7 +16,7 @@ pt-online-schema-change
 
 
 
-####删除冗余索引
+#### 删除冗余索引
 
 ```
 pt-duplicate-key-checker h = 127.0.0.1 检查冗余索引
@@ -28,7 +28,7 @@ pt-duplicate-key-checker h = 127.0.0.1 检查冗余索引
 
 
 
-####慢日志查询工具
+#### 慢日志查询工具
 
 ```
 mysqldumpslow slow_query.log
@@ -52,7 +52,7 @@ explain 对每个慢查询进行explain执行计划
 
 
 
-####备份数据
+#### 备份数据
 
 ##### （待续）增量备份（物理备份，ibd文件）
 
@@ -63,7 +63,7 @@ xtrabackup
 
 
 
-#####全量备份（逻辑备份 sql）
+##### 全量备份（逻辑备份 sql）
 
 ```
 需要备份的数据库需要以下权限：
@@ -118,7 +118,7 @@ mysqldump -ubackup -p --single-transcation --master-data=2
 
 
 
-#####mysql sql语句备份
+##### mysql sql语句备份
 
 ```
 create table table_new_name as select * from table_old_name;
@@ -136,7 +136,7 @@ create table table_new_name like table_old_name
 
 
 
-####引入数据文件命令
+#### 引入数据文件命令
 
 ##### mysqlimport
 
@@ -154,7 +154,7 @@ create tablespace zyl_data logging datafile '/oracle/data/zyl_data.dbf' size 100
 
 
 
-#####命令行引入
+##### 命令行引入
 
 ```
 mysql -uroot -p db_name < backup.sql
@@ -162,7 +162,7 @@ mysql -uroot -p db_name < backup.sql
 
 
 
-#####mysql内部引入
+##### mysql内部引入
 
 ```
 mysql>  source /tmp/backup.sql
@@ -188,7 +188,7 @@ mysql -uroot -p -e'create database db_name'
 
 
 
-####比较mysql动态参数和配置文件参数的区别
+#### 比较mysql动态参数和配置文件参数的区别
 
 ```
 pt-config-diff
@@ -200,6 +200,6 @@ set persist
 
 
 
-####迁移数据库账号
+#### 迁移数据库账号
 
 ![1572494273135](assets\1572494273135.png)

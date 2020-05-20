@@ -77,7 +77,7 @@ MDL锁：
 
 
 
-####mysql数据库锁的分类：
+#### mysql数据库锁的分类：
 
 ```
 按锁的粒度划分
@@ -126,7 +126,7 @@ innodb使用的是行级锁
 利用 undo log来实现mvcc的并发控制
 ```
 
-![1572488014978](C:/Users/Administrator/Desktop/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/mysql/assets/1572488014978.png)
+![1572488014978](assets/1572488014978.png)
 
 
 
@@ -187,11 +187,11 @@ RR 与 Seriallize 使用 该锁
 如过部分命中的话则在部分范围内进行加锁。
 ```
 
-![1572503426445](C:/Users/Administrator/Desktop/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/mysql/assets/1572503426445.png)
+![1572503426445](assets/1572503426445.png)
 
 
 
-![1572504347705](C:/Users/Administrator/Desktop/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/mysql/assets/1572504347705.png)
+![1572504347705](assets/1572504347705.png)
 
 
 
@@ -199,7 +199,7 @@ RR 与 Seriallize 使用 该锁
 
 
 
-####mysql锁；
+#### mysql锁；
 
 ```
 当查询不走索引时，默认就会使用表锁

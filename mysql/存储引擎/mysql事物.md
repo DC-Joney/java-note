@@ -122,7 +122,7 @@ SELECT title FROM film WHERE film_id = 1 LOCK IN SHARE MODE ;
 输出结果 分别为 demo 和 123
 ```
 
-![1572500223121](C:/Users/Administrator/Desktop/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/mysql/assets/1572500223121.png)
+![1572500223121](assets/1572500223121.png)
 
 
 

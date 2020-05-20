@@ -74,7 +74,7 @@ show privileges;
 
 
 
-####mysql 客户端执行sql
+#### mysql 客户端执行sql
 
 ```
 mysql -uroot -p -e'create database db_name'
@@ -82,7 +82,7 @@ mysql -uroot -p -e'create database db_name'
 
 
 
-####查看数据库下的所有表
+#### 查看数据库下的所有表
 
 ```、
 SHOW [FULL] TABLES [FROM db_name] [like_or_where]
@@ -90,7 +90,7 @@ SHOW [FULL] TABLES [FROM db_name] [like_or_where]
 
 
 
-####查看表的状态
+#### 查看表的状态
 
 ```
 show table status like 'table_name';
@@ -116,7 +116,7 @@ show table status like 'table_name';
 
 
 
-####查看创建表的sql
+#### 查看创建表的sql
 
 ```
 show create table table_name;
@@ -132,7 +132,7 @@ SHOW OPEN TABLES [FROM db_name] [like_or_where]：列出当前在表缓存中所
 
 
 
-####查看错误日志
+#### 查看错误日志
 
 ```
 select @@log_error；
@@ -142,7 +142,7 @@ select @@log_error_verbosity;
 
 
 
-####查看二进制日志；
+#### 查看二进制日志；
 
 ```
 SHOW {BINARY | MASTER} LOGS：在服务器上列出二进制日志文件。
@@ -150,7 +150,7 @@ SHOW {BINARY | MASTER} LOGS：在服务器上列出二进制日志文件。
 
 
 
-####刷新二进制日志文件
+#### 刷新二进制日志文件
 
 ```
 flush logs
@@ -168,7 +168,7 @@ show index from tb_name;
 
 
 
-####删除某个时间点之前的二进制日志文件
+#### 删除某个时间点之前的二进制日志文件
 
 ```
 purge binary logs to 'mysql-bin.010'
@@ -180,7 +180,7 @@ purge binary logs before '2001-04-02 06:40:00' 将指定日期之前的二进制
 
 
 
-####查看主库或者从库的状态
+#### 查看主库或者从库的状态
 
 ```
 show slave status；
@@ -212,7 +212,7 @@ show global status where varaiable_name like in ('Queries','uptime'); 第二次�
 
 
 
-####kill掉某个线程
+#### kill掉某个线程
 
 ```
 kill thread_id;
@@ -220,7 +220,7 @@ kill thread_id;
 
 
 
-####校验主从数据表是否一致
+#### 校验主从数据表是否一致
 
 ```校验主从数据表是否一致
 checksum table table_name
@@ -252,7 +252,7 @@ SHOW [FULL] COLUMNS FROM tbl_name [FROM db_name] [like_or_where]
 
 
 
-####查看数据正在运行的线程
+#### 查看数据正在运行的线程
 
 ```
 SHOW [FULL] PROCESSLIST：SHOW PROCESSLIST显示你正在运行的线程。
@@ -270,7 +270,7 @@ SHOW PROFILE [types] [FOR QUERY n] [OFFSET n] [LIMIT n]
 
 
 
-####reset 重置状态
+#### reset 重置状态
 
 ```
 MASTER
@@ -285,7 +285,7 @@ SLAVE
 
 
 
-####开启事物
+#### 开启事物
 
 ```
 begin 开启事物

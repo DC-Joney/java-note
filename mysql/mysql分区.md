@@ -1,4 +1,4 @@
-###mysql分区
+### mysql分区
 
 是否支持分区
 
@@ -59,7 +59,7 @@ partition 为 active
 
 
 
-####分区表类型
+#### 分区表类型
 
 Hash分区
 
@@ -127,7 +127,7 @@ where table_name = 'table_name';
 
 
 
-####修剪分区
+#### 修剪分区
 
 添加分区：
 
