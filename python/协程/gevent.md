@@ -1,0 +1,4 @@
+```
+money.patchall()
+```
+
