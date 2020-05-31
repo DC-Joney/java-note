@@ -123,3 +123,7 @@ https://www.processon.com/view/link/5c62bd36e4b0fa03ceb0c7fe#map
 
 
 https://www.jianshu.com/p/2ecb2acf35b1（API）
+
+
+
+https://houbb.github.io/2018/09/22/java-nio-09-17-zero-copy-java-impl
