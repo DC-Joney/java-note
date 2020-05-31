@@ -113,3 +113,13 @@ aio 基于 Socket
 - Files.size()：查看文件个数。
 - Files.read()：读取文件。
 - Files.write()：写入文件。
+
+文章： https://juejin.im/user/59c7640851882578e00ddf90
+
+https://www.cnblogs.com/winner-0715/p/8733787.html
+
+https://www.processon.com/view/link/5c62bd36e4b0fa03ceb0c7fe#map
+
+
+
+https://www.jianshu.com/p/2ecb2acf35b1（API）
