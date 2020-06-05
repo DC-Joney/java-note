@@ -1,4 +1,4 @@
-#####IO
+##### IO
 
 ![img](https://img-blog.csdn.net/20161028200138458) 
 
@@ -20,13 +20,13 @@
 
 
 
-####5种IO模型
+#### 5种IO模型
 
        《UNIX网络编程》说得很清楚，5种IO模型分别是阻塞IO模型、非阻塞IO模型、IO复用模型、信号驱动的IO模型、异步IO模型；前4种为同步IO操作，只有异步IO模型是异步IO操作。下面这样些图，是它里面给出的例子：接收网络UDP数据的流程在IO模型下的分析，在它的基础上再加以简单描述，以区分这些IO模型。
 
 
 
-#####阻塞IO模型
+##### 阻塞IO模型
 
 ![img](https://upload-images.jianshu.io/upload_images/2836699-a13146fd8158712e.png?imageMogr2/auto-orient/strip|imageView2/2/w/708/format/webp)  
 
@@ -50,7 +50,7 @@
 
 
 
-#####非阻塞IO模型
+##### 非阻塞IO模型
 
 ![img](https://upload-images.jianshu.io/upload_images/2836699-5a4cc7c4c9f2b94d.png?imageMogr2/auto-orient/strip|imageView2/2/w/788/format/webp)  
 
@@ -76,7 +76,7 @@
 
 
 
-#####IO复用模型
+##### IO复用模型
 
 ![img](https://upload-images.jianshu.io/upload_images/2836699-1f7ed47b78c08e25.png?imageMogr2/auto-orient/strip|imageView2/2/w/811/format/webp) 
 
@@ -103,7 +103,7 @@
 
 
 
-#####select、poll、epoll
+##### select、poll、epoll
 
 ```
 Linux中IO复用的实现方式主要有select、poll和epoll：
@@ -118,7 +118,7 @@ Epoll ：事件驱动不阻塞，mmap实现内核与用户空间的消息传递�
 
 
 
-#####信号驱动IO模型
+##### 信号驱动IO模型
 
 ![img](https://img-blog.csdn.net/20161028200140021) 
 
@@ -131,7 +131,7 @@ Epoll ：事件驱动不阻塞，mmap实现内核与用户空间的消息传递�
 
 
 
-#####异步IO模型
+##### 异步IO模型
 
 ![img](https://upload-images.jianshu.io/upload_images/2836699-0729a57363191150.png?imageMogr2/auto-orient/strip|imageView2/2/w/769/format/webp) 
 

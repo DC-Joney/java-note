@@ -1,4 +1,4 @@
-####多线程的几种实现方式？
+#### 多线程的几种实现方式？
 
 ```
 继承Thread类
@@ -30,10 +30,10 @@
 
 
 
-####Thread.join方法？
+#### Thread.join方法？
 
 ```
-ublic final synchronized void join(long millis) throws InterruptedException {
+public final synchronized void join(long millis) throws InterruptedException {
     ...
     if (millis == 0) {
         while (isAlive()) {
@@ -50,7 +50,7 @@ ublic final synchronized void join(long millis) throws InterruptedException {
 
 
 
-####Thread.sleep() 和 Thread.yield()有什么区别?
+#### Thread.sleep() 和 Thread.yield()有什么区别?
 
 ```
 yield:
@@ -67,7 +67,7 @@ yield:
 
 
 
-####Thread.exit 方法
+#### Thread.exit 方法
 
 ```
 在thread 结束的时候默认会调用 thread类的exit方法 来将 当前thread对象从 所在的threadGroup中 移出掉（移除的时候所在group中 --nThreads ）
@@ -75,7 +75,7 @@ yield:
 
 
 
-####sleep 方法与 wait方法的区别是什么？
+#### sleep 方法与 wait方法的区别是什么？
 
 ```
 sleep:
@@ -89,7 +89,7 @@ wait:
 
 
 
-####sleep(0) 与 sleep（i）的区别是什么？
+#### sleep(0) 与 sleep（i）的区别是什么？
 
 ```
 这听上去好像没有什么意义，但其实调用Thread.sleep(0)的当前线程确实被“冻结”了一下，让其他线程有机会优先执行。也就是说当前线程会释放一些未用完的时间片给其他线程或进程使用，就相当于一个让位动作，这看上去就和下面要说的yield方法很像了。
@@ -97,13 +97,13 @@ wait:
 
 
 
-####start方法与run方法的区别？
+#### start方法与run方法的区别？
 
 Run方法会在Thread.c文件中使用JVM_startThread 类启动线程然后执行 run方法
 
  
 
-![img](C:\Users\Administrator\Desktop\面试\面试题\java基础\juc\assets/wpsE510.tmp.jpg)
+![img](assets/wpsE510.tmp.jpg)
 
 
 
@@ -111,7 +111,7 @@ Run方法会在Thread.c文件中使用JVM_startThread 类启动线程然后执�
 
 
 
-####thread.interupte()
+#### Thread.interupte()
 
 ````
 InterruptedException
@@ -120,7 +120,7 @@ InterruptedException
 
 
 
-####ThreadLocal 的用途是什么？ 原理是什么？ 有什么弊端？
+#### ThreadLocal 的用途是什么？ 原理是什么？ 有什么弊端？
 
 ```
 ThreadLocal主要用于线程间的数据隔离，并且将本地变量绑定到该线程上

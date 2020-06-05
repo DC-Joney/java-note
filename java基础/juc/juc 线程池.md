@@ -8,7 +8,7 @@ https://www.jianshu.com/u/f57de6e249f6
 
 
 
-####FutureTask解读
+#### FutureTask解读
 
 ```
 
@@ -16,7 +16,7 @@ https://www.jianshu.com/u/f57de6e249f6
 
 
 
-####Juc中常用的线程池有哪些，分别有什么作用？
+#### Juc中常用的线程池有哪些，分别有什么作用？
 
 ```
 线程池分为三种
@@ -52,7 +52,7 @@ Executors：创建各种线程池的工具类
 
 
 
-####线程池的参数有哪些？ 作用是什么？
+#### 线程池的参数有哪些？ 作用是什么？
 
 ```
 corePoolSize、 maximumPoolSize。线程池会自动根据corePoolSize和maximumPoolSize去调整当前线程池的大小。当你通过submit或者execute方法提交任务的时候，如果当前线程池的线程数小于corePoolSize,那么线程池就会创建一个新的线程处理任务, 即使其他的core线程是空闲的。如果当前线程数大于corePoolSize并且小于
@@ -92,7 +92,7 @@ corePoolSize，maximumPoolSize，workQueue之间关系。
 
 
 
-####线程池的状态有哪些？
+#### 线程池的状态有哪些？
 
 ```
 状态这里主要分为下面几种：
@@ -141,7 +141,7 @@ private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));
 
 
 
-####线程池的拒绝策略有哪些？
+#### 线程池的拒绝策略有哪些？
 
 ```
 AbortPolicy：直接抛出异常，默认策略；
@@ -156,7 +156,7 @@ DiscardPolicy：直接丢弃任务；
 
 
 
-####CompletionService的使用方法？
+#### CompletionService的使用方法？
 
  ```
 CompletionService 接口的功能是以异步的方式一边生产新的任务，一边处理已完成任务的结果，这样就可以将执行任务与处理任务分离开。
@@ -185,11 +185,11 @@ private class QueueingFuture extends FutureTask<Void> {
 
 
 
-####CompletionFunture的使用方法？
+#### CompletionFunture的使用方法？
 
 
 
-####ForkJoinPool的原理以及使用方法？
+#### ForkJoinPool的原理以及使用方法？
 
 ```
 Java7 提供了ForkJoinPool来支持将一个任务拆分成多个“小任务”并行计算，再把多个“小任务”的结果合并成总的计算结果。
@@ -203,7 +203,7 @@ ForkJoinPool是ExecutorService的实现类，因此是一种特殊的线程池�
 
 
 
-####线程池的工作原理是什么？
+#### 线程池的工作原理是什么？
 
 重点看execute的实现
 
