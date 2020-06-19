@@ -1,4 +1,4 @@
-####慢查询sql
+#### 慢查询sql
 
 ·根据慢日志来定位慢sql查询
 
@@ -82,19 +82,19 @@ sql优化
 
 
 
-####in 和 exist的区别
+#### in 和 exist的区别
 
 
 
-####select * 和 select col_names的区别
+#### select * 和 select col_names的区别
 
 
 
-####count(0) 和 count(*)的区别
+#### count(0) 和 count(*)的区别
 
 
 
-####更新索引统计信息和减少索引碎片
+#### 更新索引统计信息和减少索引碎片
 
 ```
 analyze table table_name;(分析表状态)

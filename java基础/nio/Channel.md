@@ -24,7 +24,7 @@ Channel 模型图：
 
 4、ByteChannel：表示当前通道既可以读取，也可以写入数据，既双向通道
 
-5、SeekableByteChannel：用于在通道中指定的位置开始写入数据，也就是可以定位到数据中的某个位置，从该位置开始写入数据，trucate方法：
+5、SeekableByteChannel：用于在通道中指定的位置开始写入数据，也就是可以定位到数据中的某个位置，从该位置开始写入数据，**trucate方法：   可以截取指定长度的文件 **
 
 6、GatheringByteChannel：可以向通道写入数据，可以穿入ByteBuffer 数组。
 
