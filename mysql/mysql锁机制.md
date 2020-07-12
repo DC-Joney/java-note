@@ -1,4 +1,4 @@
-####mysql的锁机制？
+#### mysql的锁机制？
 
 ```
 Flush tables with read|write lock (FTWRL) 全局锁

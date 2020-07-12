@@ -70,19 +70,23 @@ Java NIO 有以下Buffer类型
 
 #### capacity
 
-作为一个内存块，Buffer有一个固定的大小值，也叫“capacity” 表示当前缓冲区的容量
+作为一个内存块，Buffer有一个固定的大小值，也叫“capacity” 表示当前缓冲区的容量,也就是最多只能写入容量值得字节，整形等数据。一旦buffer写满了就需要清空已读数据以便下次继续写入新的数据。
 
 #### position
 
-当你写数据到Buffer中时，position表示当前的位置。初始的position值为0.当一个byte、long等数据写到Buffer后， position会向前移动到下一个可插入数据的Buffer单元。position最大可为capacity – 1.
+当写入数据到Buffer的时候需要中一个确定的位置开始，默认初始化时这个位置position为0，一旦写入了数据比如一个字节，整形数据，那么position的值就会指向数据之后的一个单元，position最大可以到capacity-1.
 
-当读取数据时，也是从某个特定位置读。当将Buffer从写模式切换到读模式，position会被重置为0. 当从Buffer的position处读取数据时，position向前移动到下一个可读的位置。
+当从Buffer读取数据时，也需要从一个确定的位置开始。
+
+buffer从写入模式变为读取模式时，position会归零，每次读取后，position向后移动。
 
 #### limit
 
-在写模式下，Buffer的limit表示你最多能往Buffer里写多少数据。 写模式下，limit等于Buffer的capacity。
+在写模式，limit的含义是我们所能写入的最大数据量。它等同于buffer的容量。
 
-当切换Buffer到读模式时， limit表示你最多能读到多少数据。因此，当切换Buffer到读模式时，limit会被设置成写模式下的position值。换句话说，你能读到之前写入的所有数据（limit被设置成已写数据的数量，这个值在写模式下就是position）
+一旦切换到读模式，limit则代表我们所能读取的最大数据量，他的值等同于写模式下position的位置。
+
+数据读取的上限时buffer中已有的数据，也就是limit的位置（原position所指的位置）。
 
 
 
@@ -127,9 +131,13 @@ flip方法将Buffer从写模式切换到读模式。调用flip()方法会将posi
 
 换句话说，position现在用于标记读的位置，limit表示之前写进了多少个byte、char等 —— 现在能读取多少个byte、char等。
 
+
+
 ### rewind()方法
 
 Buffer.rewind()将position设回0，所以你可以重读Buffer中的所有数据。limit保持不变，仍然表示能从Buffer中读取多少个元素（byte、char等）。
+
+
 
 ### clear()与compact()方法
 
@@ -142,6 +150,8 @@ Buffer.rewind()将position设回0，所以你可以重读Buffer中的所有数�
 如果Buffer中仍有未读的数据，且后续还需要这些数据，但是此时想要先先写些数据，那么使用compact()方法。
 
 compact()方法将所有未读的数据拷贝到Buffer起始处。然后将position设到最后一个未读元素正后面。limit属性依然像clear()方法一样，设置成capacity。现在Buffer准备好写数据了，但是不会覆盖未读的数据。
+
+
 
 ### mark()与reset()方法
 
@@ -183,6 +193,8 @@ compareTo()方法比较两个Buffer的剩余元素(byte、char等)， 如果满�
 
 
 ### DirectByteBuffer
+
+
 
 
 
