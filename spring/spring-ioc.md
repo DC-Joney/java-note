@@ -8,13 +8,13 @@ ApplicationContext是 面试用户直接使用的
 
 
 
-####Spring bean的作用域
+#### Spring bean的作用域
 
 ![1572954463336](assets\1572954463336.png)
 
 
 
-####Spring bean的生命周期
+#### Spring bean的生命周期
 
 ```
 /**
@@ -75,7 +75,7 @@ ApplicationContext是 面试用户直接使用的
 
 
 
-####spring IOC初始化流程
+#### spring IOC初始化流程
 
 ```
 ApplicationContext context = new AnnotationConfigApplicationContext();

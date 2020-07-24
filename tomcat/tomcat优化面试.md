@@ -8,7 +8,7 @@
 
 Catalina.sh 中的 java.opts
 
-![img](C:\Users\Administrator\Desktop\面试\面试题\tomcat\assets/wpsB2C7.tmp.jpg) 
+![img](assets/wpsB2C7.tmp.jpg) 
 
  
 

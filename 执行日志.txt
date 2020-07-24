@@ -1,0 +1,66 @@
+
+################################ 以下过程执行均为串行执行 #########################################
+
+Main Step1## java.lang.Object object internals:  （markword 101 ，代表偏向锁，ThreadId 记录为空）
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)
+      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+      8     4        (object header)                           e5 01 00 f8 (11100101 00000001 00000000 11111000) (-134217243)
+     12     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+Main Step2## java.lang.Object object internals: （markword  101 + Thread id  偏向锁）
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           05 98 0c 03 (00000101 10011000 00001100 00000011) (51156997)
+      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+      8     4        (object header)                           e5 01 00 f8 (11100101 00000001 00000000 11111000) (-134217243)
+     12     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+Main Step3## java.lang.Object object internals: （ markword 101，执行完成以后 ThreadID 不撤销）
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           05 98 0c 03 (00000101 10011000 00001100 00000011) (51156997)
+      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+      8     4        (object header)                           e5 01 00 f8 (11100101 00000001 00000000 11111000) (-134217243)
+     12     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+T1 Step1## java.lang.Object object internals:  （markword  101 Main ThreadID 偏向锁）
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           05 98 0c 03 (00000101 10011000 00001100 00000011) (51156997)
+      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+      8     4        (object header)                           e5 01 00 f8 (11100101 00000001 00000000 11111000) (-134217243)
+     12     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+T1 Step2## java.lang.Object object internals:   （markword  00  偏向锁撤销，升级为轻量级锁 ，线程栈中记录LockRecord信息 ）
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           40 f2 35 21 (01000000 11110010 00110101 00100001) (557183552)
+      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+      8     4        (object header)                           e5 01 00 f8 (11100101 00000001 00000000 11111000) (-134217243)
+     12     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+T1 Step3## java.lang.Object object internals:   （markword  001  轻量级锁解锁，偏向锁撤销为无锁 ）
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)
+      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+      8     4        (object header)                           e5 01 00 f8 (11100101 00000001 00000000 11111000) (-134217243)
+     12     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+Main Last## java.lang.Object object internals:   （markword  001  ，不再恢复偏向锁标志位，直到某个线程（XXThread）拥有lock锁20次以上，才会再次增加偏向锁标志位，并且ThreadId 为 XXThread 的线程ID）
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           01 00 00 00 (00000001 00000000 00000000 00000000) (1)
+      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+      8     4        (object header)                           e5 01 00 f8 (11100101 00000001 00000000 11111000) (-134217243)
+     12     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
