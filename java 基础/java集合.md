@@ -1,4 +1,4 @@
-##java集合考题
+## java集合考题
 
 ### java 集合 下的 架构图是什么样子的？
 
@@ -32,7 +32,7 @@
 
 
 
-####大体的图示
+#### 大体的图示
 
 ![1571932535750](assets\1571932535750.png)
 
@@ -44,11 +44,11 @@
 
 
 
-###Collection 和 Map的区别是什么？
+### Collection 和 Map的区别是什么？
 
 
 
-###HashMap和HashTable的区别是什么？
+### HashMap和HashTable的区别是什么？
 
 HashMap没有考虑同步，是线程不安全的；Hashtable使用了synchronized关键字，是线程安全的；
 
@@ -64,7 +64,7 @@ HashMap 继承自AbstractMap类；而Hashtable继承自Dictionary类；
 
 
 
-###java 集合的fail-fast机制 是什么？
+### java 集合的fail-fast机制 是什么？
 
 **是java集合的一种错误检测机制，当多个线程对集合进行结构上的改变的操作时，有可能会产生 fail-fast 机制。**
 
@@ -93,7 +93,7 @@ ArrayList 与 Vector 的区别主要包括两个方面：
 
 
 
-###ArrayList的扩展？
+### ArrayList的扩展？
 
  ArrayList内部维护了一个final 类型的 DEFAULTCAPACITY_EMPTY_ELEMENTDATA 变量默认是一个空的数组
 
@@ -107,7 +107,7 @@ ArrayList 与 Vector 的区别主要包括两个方面：
 
 
 
-###ArrayList和 LinkedList的不同点是什么？ 各有什么优缺点？
+### ArrayList和 LinkedList的不同点是什么？ 各有什么优缺点？
 
 
 

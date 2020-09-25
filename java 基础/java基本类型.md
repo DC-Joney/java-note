@@ -43,7 +43,7 @@ public String toString() {
 
 
 
-###抽象类 和接口的区别是什么？
+### 抽象类 和接口的区别是什么？
 
 1、抽象类和接口都不能直接实例化，如果要实例化，抽象类变量必须指向实现所有抽象方法的子类对象，接口变量必须指向实现所有接口方法的类对象。
 
@@ -67,7 +67,7 @@ public String toString() {
 
 
 
-###请结合 OO 设计理念，谈谈访问修饰符 public、private、protected、default 在应用设计中的作用
+### 请结合 OO 设计理念，谈谈访问修饰符 public、private、protected、default 在应用设计中的作用
 
 public： Java语言中访问限制最宽的修饰符，一般称之为“公共的”。被其修饰的类、属性以及方法不 　　　　　仅可以跨类访问，而且允许跨包（package）访问。 
 
@@ -79,7 +79,7 @@ default：即不加任何访问修饰符，通常称为“默认访问模式“�
 
 
 
-###深拷贝和浅拷贝区别？
+### 深拷贝和浅拷贝区别？
 
 首先Object.clone() 本身就是浅拷贝
 
@@ -91,23 +91,23 @@ default：即不加任何访问修饰符，通常称为“默认访问模式“�
 
 ![1571927678181](assets/1571927678181.png)
 
-###如过在父类中为子类自动完成所有的hashcode和equals实现？这么做有何优劣。
+### 如过在父类中为子类自动完成所有的hashcode和equals实现？这么做有何优劣。
 
 
 
 
 
-###数组和链表数据结构描述，各自的时间复杂度 
+### 数组和链表数据结构描述，各自的时间复杂度 
 
 
 
-###说一说你对java.lang.Object对象中hashCode和equals方法的理解。在什么场景下需要重新实现这两个方法。
+### 说一说你对java.lang.Object对象中hashCode和equals方法的理解。在什么场景下需要重新实现这两个方法。
 
 
 
 
 
-###a.hashcode() 有什么用，与a.equals(b)有什么关系
+### a.hashcode() 有什么用，与a.equals(b)有什么关系
 
 ```
 java中==和eqauls()的区别,equals()和hashcode的区别
@@ -139,7 +139,7 @@ a==b与a.equals(b)有什么区别
 
 
 
-###Comparable 和 Comparator的区别是什么？
+### Comparable 和 Comparator的区别是什么？
 
 Comparable 用于内部排序，Comparator 用于外部排序
 

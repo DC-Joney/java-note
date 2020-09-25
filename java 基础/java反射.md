@@ -1,10 +1,10 @@
-##反射 相关面试题
+## 反射 相关面试题
 
-###反射是如何实现的？
+### 反射是如何实现的？
 
 根据Class类实现反射，可以拿到该类中的所有信息，包括方法、构造器、属性等等
 
-###动态代理有几种实现方式？分别如何实现？
+### 动态代理有几种实现方式？分别如何实现？
 
 有两种方式（代理也分两种，分别是静态代理和动态代理，也就是所谓的修饰着模式）
 
@@ -113,7 +113,7 @@ Object obj = constroctor.newInstance("龙哥", 29); 
 
 
 
-###Object.class 返回什么？ 那 Object.class.getClass() 又返回什么？
+### Object.class 返回什么？ 那 Object.class.getClass() 又返回什么？
 
 ```
 Object.class 返回当前Object对象对应的类实例，
@@ -126,7 +126,7 @@ Object.class 返回当前Object对象对应的类实例，
 
 
 
-###反射的结构图？
+### 反射的结构图？
 
 ```
 GenericDeclaration（返回泛型类型参数）
@@ -158,7 +158,7 @@ GenericArrayType
 
 
 
-####GenericDeclaration
+#### GenericDeclaration
 
 ```
 GenericDeclaration
@@ -190,7 +190,7 @@ V
 
 
 
-####TypeVariable
+#### TypeVariable
 
 ```
 TypeVariable是“类型变量”（或者叫“泛型变量”更准确些）的通用的顶级接口。在泛型编程中会用到“泛型变量”来描述类型，或者说是用来表示泛型。一般用大写字母作为类型变量，比如K、V、E等。
@@ -253,7 +253,7 @@ String getName()
 
 
 
-####ParameterizedType
+#### ParameterizedType
 
 ```
 ParameterizedType是Type的子接口，表示一个有参数的类型，例如Collection<T>，Map<K,V>等。但实现上 ParameterizedType并不直接表示Collection<T>和Map<K,V>等，而是表示 Collection<String>和Map<String,String>等这种具体的类型。是不是看着眼熟，其实这就是我们常说的泛型。而ParameterizedType代表的是一个泛型的实例，我们就称ParameterizedType为“泛型实例”吧。
@@ -285,7 +285,7 @@ Type getOwnerType()
 
 
 
-####GenericArrayType
+#### GenericArrayType
 
 ```
 GenericArrayType是Type的子接口，用于表示“泛型数组”，描述的是形如：A<T>[]或T[]的类型。其实也就是描述ParameterizedType类型以及TypeVariable类型的数组，即形如：classA<T>[][]、T[]等。
@@ -296,7 +296,7 @@ Type getGenericComponentType()
 
 
 
-####WildcardType
+#### WildcardType
 
 ```
 WildcardType是Type的子接口，用于描述形如“? extends classA” 或 “？super classB”的“泛型参数表达式”。
