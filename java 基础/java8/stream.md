@@ -843,7 +843,7 @@ default Spliterator spliterator()
 
 ###  Spliterators
 
-
+将iterator 转换为 Spliterator 对象
 
 
 
