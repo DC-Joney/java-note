@@ -196,7 +196,7 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
 
 各个状态之间的状态转换图如下：
 
-![clipboard.png](assets/1775204445-5bce7fc20832b_articlex.png)
+![clipboard.png](../assets/1775204445-5bce7fc20832b_articlex.png)
 
 上图需要注意的是两点：
 
@@ -287,7 +287,7 @@ static final class WaitNode {
 }
 ```
 
-![clipboard.png](assets/3315225335-5bce7ad2c3040_articlex.png)
+![clipboard.png](../assets/3315225335-5bce7ad2c3040_articlex.png)
 
 ------
 

@@ -268,7 +268,7 @@ ThreaLocal 是将自定义存储的数据和当前线程进行绑定
 
 
 
-####如果让你实现一个并发安全的链表，你会怎么做。
+#### 如果让你实现一个并发安全的链表，你会怎么做。
 
 使用cas算法来进行识别
 
@@ -276,7 +276,7 @@ ThreaLocal 是将自定义存储的数据和当前线程进行绑定
 
 
 
-####有哪些无锁数据结构，他们实现的原理是什么。
+#### 有哪些无锁数据结构，他们实现的原理是什么。
 
 ```
 ConcurrentListQueue、LinkedTrsformQueue
@@ -286,7 +286,7 @@ ConcurrentListQueue、LinkedTrsformQueue
 
 
 
-####讲讲java同步机制的wait和notify。
+#### 讲讲java同步机制的wait和notify。
 
 ```
 wait方法会让当前线程进入waiting状态，并且将当前线程加入到对象锁关联的ObjectMonitor中的waitSet中，在waitSet中的线程不允许再去争抢 该锁，而notify则是随机的从waitSet中 获取一条等待的线程放入到entryList（锁池）中
@@ -294,7 +294,7 @@ wait方法会让当前线程进入waiting状态，并且将当前线程加入到
 
 
 
-####CAS机制是什么，如何解决ABA问题。
+#### CAS机制是什么，如何解决ABA问题。
 
 ```
 AtomicStampedReference（内置为int类型版本号）
@@ -309,7 +309,7 @@ AtomicMarkableReference（内置为boolean类型版本号）
 
 
 
-####countdowlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别(比如countdownlatch的await方法和是怎么实现的)。
+#### countdowlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别(比如countdownlatch的await方法和是怎么实现的)。
 
 
 
@@ -317,7 +317,7 @@ AtomicMarkableReference（内置为boolean类型版本号）
 
 
 
-####对AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占锁和公平所加锁有什么不同。
+#### 对AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占锁和公平所加锁有什么不同。
 
 ```
 AQS核心点：
@@ -334,13 +334,13 @@ AQS核心点：
 
 
 
-####使用synchronized修饰静态方法和非静态方法有什么区别。
+#### 使用synchronized修饰静态方法和非静态方法有什么区别。
 
 synchorized 修饰的静态方法 是使用当前类对象的lock monitor，非静态方法使用的是 当前对象的lock monitor
 
 
 
-####简述ConcurrentLinkedQueue和LinkedBlockingQueue的用处和不同之处。
+#### 简述ConcurrentLinkedQueue和LinkedBlockingQueue的用处和不同之处。
 
 ConcurrentLinkedQueue不是阻塞的队列，内部并没有使用到锁，而是使用的cas来更新添加队列节点
 
@@ -352,7 +352,7 @@ ConcurrentLinkedQueue不是阻塞的队列，内部并没有使用到锁，而�
 
 
 
-####导致线程死锁的原因？怎么解除线程死锁。
+#### 导致线程死锁的原因？怎么解除线程死锁。
 
 导致线程的死锁的原因可能是A拥有lockA 想竞争lockB  ，而 线程B 拥有lockB 想竞争lockA
 
@@ -360,11 +360,11 @@ ConcurrentLinkedQueue不是阻塞的队列，内部并没有使用到锁，而�
 
 
 
-####非常多个线程（可能是不同机器），相互之间需要等待协调，才能完成某种工作，问怎么设计这种协调方案。
+####     非常多个线程（可能是不同机器），相互之间需要等待协调，才能完成某种工作，问怎么设计这种协调方案。
 
 
 
-####用过读写锁吗，原理是什么，一般在什么场景下用。
+####        用过读写锁吗，原理是什么，一般在什么场景下用。
 
 ```
 使用的是 ReadWriteLock来实现的读写锁，内部默认是使用的 
@@ -372,7 +372,7 @@ ConcurrentLinkedQueue不是阻塞的队列，内部并没有使用到锁，而�
 
 
 
-####开启多个线程，如果保证顺序执行，有哪几种实现方式，或者如何保证多个线程都执行完再拿到结果。
+#### 开启多个线程，如果保证顺序执行，有哪几种实现方式，或者如何保证多个线程都执行完再拿到结果。
 
 ```
 使用公平锁来实现
@@ -386,11 +386,11 @@ ConcurrentLinkedQueue不是阻塞的队列，内部并没有使用到锁，而�
 
 ![img](assets/wps8C90.tmp.jpg) 
 
-![img](C:\Users\Administrator\Desktop\面试\面试题\java基础\assets/wps8CCF.tmp.jpg) 
+![img](assets/wps8CCF.tmp.jpg) 
 
 
 
 
 
-####延迟队列的实现方式，delayQueue和时间轮算法的异同。
+#### 延迟队列的实现方式，delayQueue和时间轮算法的异同。
 
