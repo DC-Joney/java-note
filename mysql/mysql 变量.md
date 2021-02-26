@@ -1,4 +1,4 @@
-####mysql的数据目录
+### mysql的数据目录
 
 ```
 my.cnf data_dir
