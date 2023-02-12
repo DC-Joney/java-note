@@ -1,4 +1,4 @@
-### Pod 概念
+## Pod 概念
 
 Pod是Kubernetes的最重要也最基本的概念，如图所示是Pod的组成示意图，我们看到每个Pod都有一个特殊的被成为“根容器”的Pause容器。Pause容器对应的镜像属于Kubernetes平台的一部分，除了Pause容器，每个Pod还包含一个或多个紧密相关的用户业务容器。
 
@@ -94,6 +94,38 @@ Copy
 
 
 
+## Pod 生命周期
 
 
-​                                                                                                    **您需要解锁本帖隐藏内容请：                            点击这里                                                    ×                                                                        ![img](../../images/user/noHeadPortraitV2.png)                        作者开启了打赏可见                                                                                                                                                        2                                ￥                                                                                                                     5                                ￥                                                                                                                     10                                ￥                                                                                                                     20                                ￥                                                                                                                                                                                            选择支付方式                                                                 微信支付                                                                        支付宝                                                                                     赞赏金额:￥2                        立即支付                                                                                                   微信二维码**                                                                                                                                                                                                                 
+
+
+
+## Pause 容器
+
+K8s 在创建一个Pod 之后会优先创建一个名为Pause 的容器，通过该容器是的 Pod 内的 MainC 容器共享同一Pod的网络与 存储
+
+
+
+## Pod 管理
+
+### 简单示例：
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+	name: test-pod
+	namespace: test
+	labels:
+	  - app: 123
+	    fronted: test
+spec:
+  conatiners:
+  	- name: busybox
+  	  image: busybox
+  	  imagePullPocily: Always
+  	  command:
+  	    - "echo 123"
+```
+
+上述是一个简单的Pod 资源的定义文件，使用 kubectl apply -f pod.yaml 生成一个新的Pod

@@ -554,4 +554,4 @@ Selector、SelectorKey、SocketChannel、ServerSocketChannel
 
 如过在java中新建了一个线程，内核就会clone出一个系统级的线程
 
-![image-20200531023336410](assets/image-20200531023336410.png)
+![image-20200531023336410](assets/image-20200531023336410.png)pp

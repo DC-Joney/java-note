@@ -1,0 +1,25 @@
+## Kubeproxy 解析
+
+
+
+
+
+
+
+
+
+### 生产参数
+
+```sh
+"/usr/local/bin/kube-proxy",
+  "--conntrack-max-per-core=0",
+  "--iptables-min-sync-period=5s",
+  "--ipvs-min-sync-period=5s",
+  "--hostname-override=$(HOST_NAME)",
+  "--conntrack-max-per-core=0",
+  "--kubeconfig=/var/lib/kube-proxy/kubeconfig.conf",
+  "--cluster-cidr=10.132.0.0/14"
+```
+
+
+

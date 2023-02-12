@@ -1,6 +1,6 @@
 ### nginx默认配置语法
 
-####全局语法
+#### 全局语法
 
 ![1572064912906](assets\1572064912906.png)
 
@@ -67,7 +67,7 @@ http 是最外层
 
 
 
-####nginx 变量
+#### nginx 变量
 
 ![1572066032565](assets\1572066032565.png)
 
@@ -79,7 +79,7 @@ send_http_HEADER 【response header】	（http_Content_Enconding）
 
 
 
-####nginx相关模块以及语法
+#### nginx相关模块以及语法
 
 ```
 stu_status 查看nginx相关的链接信息
@@ -159,7 +159,7 @@ htpasswd -c [文件名称] 用户名称 -> 输入密码 生成文件
 
 
 
-####nginx 文件传输
+#### nginx 文件传输
 
 ![1572068095414](assets\1572068095414.png)
 
@@ -197,7 +197,7 @@ gzip_static on|off; [http,server,location]
 
 
 
-####nginx缓存
+#### nginx缓存
 
 
 

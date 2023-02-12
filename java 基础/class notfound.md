@@ -10,3 +10,4 @@
 - 再深入来说，**NoClassDefFoundError 是链接错误，发生在 JVM 类加载流程的链接阶段，当解析引用的时候找不到对应的类就会抛出 NoClassDefFoundError；而 ClassNotFoundException 一般发生在类加载流程的加载阶段。**
 
 ![img](https:////upload-images.jianshu.io/upload_images/7182360-1f16caeda2adce55?imageMogr2/auto-orient/strip|imageView2/2/w/627/format/webp)
+

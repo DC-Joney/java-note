@@ -1,6 +1,8 @@
 ## Netty 基本组件
 
-# Channel、EventLoop 和ChannelFuture
+
+
+### Channel、EventLoop 和ChannelFuture
 
 接下来的各节将会为我们对于Channel、EventLoop 和ChannelFuture 类进行的讨论
 

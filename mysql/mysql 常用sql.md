@@ -298,3 +298,12 @@ start trasaction aruments
 			START TRANSACTION READ WRITE
 ```
 
+
+
+### 查看某一列索引
+
+```sql
+show index from oauth_client_details where Column_name = 'id' 
+```
+
+![image-20210607102205373](assets/image-20210607102205373.png)

@@ -96,7 +96,7 @@ no-cache
 
 
 
-###Http如何支持压缩？
+### Http如何支持压缩？
 
 ```
 Response:

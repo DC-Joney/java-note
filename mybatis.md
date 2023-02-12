@@ -417,6 +417,28 @@ MyBatis的元素可以通过OGNL表达式来创建一个上下文变量，其使
             <!--需要的地方直接引用<bind>元素的name属性值即可-->
            username like #{pattern_username}
      </select>
+     
+     
+//建立sql片段
+<sql id="query_user_where">
+	<if test="id!=null and id!=''">
+		and id=#{id}
+	</if>
+	<if test="username!=null and username!=''">
+		and username like '%${username}%'
+	</if>
+</sql>
+ 
+//使用include引用sql片段
+<select id="findUserList" parameterType="user" resultType="user">
+	select * from user
+		<where>
+			<include refid="query_user_where"/>
+		</where>
+</select>
+ 
+//引用其它mapper.xml的sql片段
+<include refid="namespace.sql片段"/>
 ```
 
 

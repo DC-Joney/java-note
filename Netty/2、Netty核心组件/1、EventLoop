@@ -11,3 +11,5 @@ EventLoop 定义了 Netty 的核心抽象，用于处理连接的生命周期中
 -  一个 EventLoop 可能会被分配给一个或多个 Channel。 
 
 注意，在这种设计中，一个给定 Channel 的 I/O 操作都是由相同的 Thread 执行的，实际 上消除了对于同步的需要。
+
+驱蚊器
